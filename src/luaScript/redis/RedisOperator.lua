@@ -53,7 +53,7 @@ function _Module.setValue(self, key, value)
     return true;
 end
 
---递增值
+--递增值：ok表示Redis中key对应的value
 function _Module.incrValue(self, key)
     local ok, err = self.red:incr(key);
     if not ok then
@@ -61,7 +61,7 @@ function _Module.incrValue(self, key)
         return false;
     end
     basic.log("incr ok!");
-    return true;
+    return ok;
 end
 
 --过期
