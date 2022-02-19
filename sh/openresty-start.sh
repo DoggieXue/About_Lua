@@ -7,7 +7,7 @@ OPENRESTY_PATH="/usr/local/openresty"
 PROJECT_PATH="/Users/xuexiao/Work/QDBank/Idea-WorkSpace/About_Lua/src"
 
 #设置Nginx启动的配置文件
-PROJECT_CONF="nginx-lua-demo.conf"
+PROJECT_CONF="nginx-redis-demo.conf"
 
 echo "OPENRESTY_PATH:$OPENRESTY_PATH"
 echo "PROJECT_PATH:$PROJECT_PATH"
