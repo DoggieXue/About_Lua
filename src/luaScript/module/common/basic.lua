@@ -118,6 +118,15 @@ local function getClientIP()
     return clientIP;
 end
 
+-- 获取table中元素的长度
+local function table_length(table)
+    local length = 0;
+    for k, v in pairs(table) do
+        length = length + 1;
+    end
+    return length;
+end
+
 --统一的模块对象
 local _Module = {
     app_info = app_info;
@@ -126,9 +135,10 @@ local _Module = {
     error = error;
     log_screen = log_screen;
     printTable = printTable;
-    tableToStr = tableToStr;
+    toStringEx = toStringEx;
     tableToStr = tableToStr;
     getClientIP = getClientIP;
+    table_length = table_length;
 }
 
 return _Module
