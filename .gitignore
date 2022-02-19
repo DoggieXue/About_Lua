@@ -48,3 +48,9 @@ Thumbs.db
 /target/
 # *.properties
 
+/src/client_body_temp/*
+/src/fastcgi_temp/*
+/src/scgi_temp/*
+/src/uwsgi_temp/*
+/src/logs/*
+
