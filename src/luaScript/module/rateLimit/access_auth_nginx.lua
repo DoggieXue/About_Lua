@@ -31,7 +31,7 @@ if not shortKey or shortKey == ngx.null then
 end
 
 -- 拼接计数的Redis Key
-local key = "count_rate_limit:ip:"..shortKey;
+local key = "nginx_count_rate_limit:ip:"..shortKey;
 
 local limiter = RedisKeyRateLimit:new(key);
 
