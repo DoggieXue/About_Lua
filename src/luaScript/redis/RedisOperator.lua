@@ -125,6 +125,14 @@ function _Module.evalsha(self, sha, key1, key2)
     return resp;
 end
 --执行秒杀脚本
+function _Module.evalSeckillSha(self, sha,method, skuId, userId, token)
+    local resp, err = self.red:evalsha(sha, 1,method, skuId, userId, token);
+    if not resp then
+        basic.log(" redis evalsha 秒杀 执行失败 ".. method .." " .. skuId .." ".. userId .." ".. token .." ".. err .." ")
+        return nil;
+    end
+    return resp;
+end
 
 function _Module.getConnection(self)
     return self.red;
